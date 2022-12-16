@@ -11,8 +11,8 @@
 
 ## Run tests
 
-To run the tests please download chromeDriver adn setup path to it in `src/main/resources/profiles/test/config.properties` file under `chromeDriverPath` variable.
-Framework is designed to run tests only in Chrome, other browser can be added if needed.
+- To run the tests please download chromeDriver and setup path to it in `src/main/resources/profiles/test/config.properties` file under `chromeDriverPath` variable.
+- Framework is designed to run tests only in Chrome, other browser can be added if needed.
 
 ```bash
 mvn clean test -Ptest
