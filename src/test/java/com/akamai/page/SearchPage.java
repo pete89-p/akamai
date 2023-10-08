@@ -11,9 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.AssertJUnit.*;
 
+// page_url = https://akamaicareers.inflightcloud.com/
 public class SearchPage extends SeleniumHelper implements SearchForm {
 
     private final WebDriver driver;
@@ -27,11 +27,11 @@ public class SearchPage extends SeleniumHelper implements SearchForm {
     @FindBy(css = "[controlid=\"keywordLocation\"] button")
     private WebElement buttonSearch;
 
-    private String suggestionRes = "//*[@id=\"keywordLocation_list\"]/li[text()=\" FIND \"]";
-    private String locSuggestion = "//*[@id=\"location_list\"]/li[text()=\" COUNTRY \"]";
-
     @FindBy(css = ".count-and-sort span")
     private WebElement resultsCounter;
+
+    private String suggestionRes = "//*[@id=\"keywordLocation_list\"]/li[text()=\" FIND \"]";
+    private String locSuggestion = "//*[@id=\"location_list\"]/li[text()=\" COUNTRY \"]";
 
     public SearchPage(WebDriver driver) {
         super(driver);
@@ -76,7 +76,7 @@ public class SearchPage extends SeleniumHelper implements SearchForm {
         waitForElement(res, 10);
         // Validating if a list with results has one or more elements
         List<WebElement> resultList = driver.findElements(By.cssSelector(results));
-        assertTrue(resultList.size() > 0);
+        assertFalse(resultList.isEmpty());
     }
 
     @Step("Validate results for not matching criteria")

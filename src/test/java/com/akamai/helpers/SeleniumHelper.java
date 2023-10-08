@@ -1,12 +1,12 @@
 package com.akamai.helpers;
 
+import com.akamai.utils.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
 
