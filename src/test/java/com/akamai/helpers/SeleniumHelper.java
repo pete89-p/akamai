@@ -1,14 +1,11 @@
 package com.akamai.helpers;
 
-import com.akamai.utils.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-
-import static org.testng.AssertJUnit.assertTrue;
 
 public class SeleniumHelper {
 
@@ -39,11 +36,6 @@ public class SeleniumHelper {
     public void click(WebElement element, int timeout) {
         waitForElement(element, timeout);
         element.click();
-    }
-
-    public void open(String url) {
-        driver.get(url);
-        assertTrue(driver.getCurrentUrl().contains(url));
     }
 
     public void fillInput(WebElement element, String text, int timeout) {
